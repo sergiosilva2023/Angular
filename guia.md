@@ -1,4 +1,4 @@
-- Conceitos de componente
+# Conceitos de componente
 - Como criar componentes
 - Como declarar componentes em modeus
 - Problema na duplicação de componentes
@@ -13,8 +13,10 @@
     - Emulated
     - ShadowDom
 
-# Criar novo componente, todos os componentes são classes javascript
+## Criar novo componente, todos os componentes são classes javascript
 ng g c card
 
-# Decoreter
+## Decoreters
 @Component
+@NgModule ({declarations: [todos os Components e pipes]})
+imports: [BrowserModule], (o imports é para todos os modules)
