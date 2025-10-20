@@ -1,0 +1,1 @@
+npx @angular/cli@16.1.0 new NOME_DO_PROJETO --style=scss --routing=false
