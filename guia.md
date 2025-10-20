@@ -13,10 +13,10 @@
     - Emulated
     - ShadowDom
 
-## Criar novo componente, todos os componentes são classes javascript
+# Criar novo componente, todos os componentes são classes javascript
 ng g c card
 
-## Decoreters
+# Decoreters
 @Component
 @NgModule ({declarations: [todos os Components e pipes]})
 imports: [BrowserModule], (o imports é para todos os modules)
