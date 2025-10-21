@@ -1,5 +1,5 @@
 <div class="card">
-    <div class="card__plan card__item">Plano <b>{{ plano.infos.tipo }}</b></div>
-    <div class="card__price card__item">{{ plano.infos.preco }} / Mês</div>
+    <div class="card__plan card__item">Plano <b>{{ plano?.infos.tipo ? plano.tipo : 'Vazio'}}</b></div>
+    <div class="card__price card__item">{{ plano?.infos.preco ? plano.infos.preco + '.00€ / Mês' : 'Vazio'}}</div>
     <app-card-button></app-card-button>
 </div>

@@ -7,13 +7,11 @@ import { Component } from '@angular/core';
 })
 
 export class CardComponent {
-plano = {
- infos: {
-    tipo: 'Simples',
-    preco: 100
- }
- }
-
+  // ts-ignore
+    plano: any = {
+      infos: {
+        tipo: 'Simples',
+        preco: 100
+      }
+    };
 }
-
-
