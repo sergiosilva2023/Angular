@@ -50,4 +50,29 @@ imports: [BrowserModule], (o imports é para todos os modules)
 # Estilos CSS Dentro do Componente(prop "Styles")
 - ng g c card-button-cancel --inline-style, gera o componente sem o template css, ficando o scss dentro do card-button-cancel.component.ts
 - Commentar o ficheiro scss para teste // stylesUrls
-- Criar styles, é sempre um array onde podemos criar vários objetos um para cada estilo com crazes styles ex: [`{.class1}`, `{.class2}`] 
+- Criar styles, é sempre um array onde podemos criar vários objetos um para cada estilo com crazes styles ex: [`{.class1}`, `{.class2}`]
+
+# Estilos dentro do template (inline styles)
+- Tag style dentro do template html
+- <style> codigo <style/>
+- É sempre o mais forte, tém mais precedência a menos que nos sytles do componente sejamos especifícos com as tags tipo div.
+
+# Importar arquivos de estilo com @Import
+- Criar variavéis no styles.css do projeto
+- $bg-color: green;
+- No ficheiro que queremos usar a variavél, temos de importar o ficheiro que contém as variáveis
+- @import "../../styles.scss";
+- Também podemos apontar a pasta styles para os nossos componentes, configuração no ficheiro angular.json logo abaixo da propriedade scripts;
+"scripts": [],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/styles"
+              ]
+            }
+
+- Reiniciar o projeto
+
+# Utilização do Selector "::ng deep"
+- Aceder a componentes filhos
+- Muito usadas para estilizar componentes de bibliotecas
+- A partir do componente Pai.

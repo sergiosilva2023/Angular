@@ -1,8 +1,10 @@
+@import "variaveis.scss";
+
 .card-button {
         font-size: 16px;
         text-align: center;
         margin-top: 10px;
-        background-color: #fff;
+        background-color: $bg-color;
         color: #fd7557;
         padding: 12px 0;
         border-radius: 25px;
