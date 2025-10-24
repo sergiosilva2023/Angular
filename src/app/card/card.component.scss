@@ -23,6 +23,10 @@
     }
 }
 
-.card .card-button { 
-    background-color: #fd7557;
+:host ::ng-deep mat-slider .mdc-slider__track--active_fill {
+    border-color: yellowgreen !important;
+}
+
+.global {
+    background-color: lightgreen;
 }

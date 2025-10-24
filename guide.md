@@ -74,5 +74,41 @@ imports: [BrowserModule], (o imports é para todos os modules)
 
 # Utilização do Selector "::ng deep"
 - Aceder a componentes filhos
+- Perfura o view encapsulation dos componentes
 - Muito usadas para estilizar componentes de bibliotecas
-- A partir do componente Pai.
+- A partir do componente Pai para o filho
+  ::ng-deep .card-button { 
+    background-color: yellow!important;
+}
+- Tem um comportamento muito peculiar
+- Se usarmos os componentes referenciados pelo ::ng-deep altera a nível global da aplicação
+- Caso queira atualizar um componente global, aplicamos a regra css (classes) dentro do ficheiro styles.scss da aplicação
+
+# Utilização do Selector ":host"
+- Elimina o efeito do selector ::ng-deep nos outros componentes
+- O componente que usar o :host ::ng-deep é que vai receber as estilizações, os outros serão ignorados
+- Também podemos criar um ficheiro _global-overrides.scss com as classes e importar dentro do styles global: @import "./styles/global-overrides.scss";
+
+# Instalar o @Angular/Material
+- npm i @angular/material ou ng add @angular/material
+- Indigo/Pink
+- Setup Global / yes
+- import {MatSliderModule} from '@angular/material/slider'; no módulos onde tenhos os componentes referenciados
+
+# View Encapsulation None
+- encapsulation: ViewEncapsulation.None (Uma camada mais alta da nossa aplicação)
+- Não é muito usual
+
+# View Encapsulation Emulated
+- Automático
+- É o que está por padrão no Angular
+- Deixa-se subescrever pelo styles globais
+
+# View Encapsulation ShadowDOM
+- Não pode ser afetado por classes globais
+- Podemos afetar os componentes filhos sem usar o ::ng-deep
+- Também não tém muito uso
+
+# Emulação ShadowDOM do Angular
+- Os atributos dos elementos só funcionam com o encapsulation: ViewEncapsulation.Emulated
+- Atributos ex: <div felipe>Felipe<div/> na folha de estilo ex: div[felipe] {background-color: green;}
